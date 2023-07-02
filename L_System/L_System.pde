@@ -28,8 +28,8 @@ void setup() {
   
   // 以下を編集対象とする
   // ルールを追加する場合、この行をコピペして記述（下のペンローズタイルを参考にする）
-  rules.add(new String[]{"A",""}); 
-  current = "A";              // 初期値を記述
+  rules.add(new String[]{"",""}); 
+  current = "";              // 初期値を記述
   angle = radians(30);        // +,-の時の角度
   // 編集対象おわり
   
