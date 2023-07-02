@@ -28,11 +28,11 @@ void setup() {
   
   // 以下を編集対象とする
   // ルールを追加する場合、この行をコピペして記述（下のペンローズタイルを参考にする）
-  rules.add(new String[]{"",""}); 
-  current = "";              // 初期値を記述
+  rules.add(new String[]{"A",""}); 
+  current = "A";              // 初期値を記述
   angle = radians(30);        // +,-の時の角度
   // 編集対象おわり
-
+  
   /*
   // ペンローズタイルの設定　開始
   // ルール 例: rules.add(new String[]{"置き換え前の文字","置き換え後の文字(列)"});
@@ -83,6 +83,7 @@ void generate() {
   for (int i = 0; i < current.length(); i++) {
     boolean flag = false;
     for (String[] rule : rules) {
+      if(rule[0].length() == 0) break;
       if (rule[0].charAt(0) == current.charAt(i)) {
         next += rule[1];
         flag = true;
